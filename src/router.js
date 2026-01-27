@@ -1,18 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '@/views/HomeView.vue';
-import AgreementView from '@/views/AgreementView.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from './views/HomeView.vue'
+import AgreementView from './views/AgreementView.vue'
 
 const routes = [
-    { path: '/', name: 'home', component: HomeView },
-    { path: '/agreement', name: 'agreement', component: AgreementView }
-];
+    { path: '/', name: 'Home', component: HomeView },
+    { path: '/agreement', name: 'Agreement', component: AgreementView }
+]
 
 const router = createRouter({
     history: createWebHistory(),
-    routes,
-    scrollBehavior() {
-        return { top: 0 };
-    }
-});
+    routes
+})
 
-export default router;
+export default router

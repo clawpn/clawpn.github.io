@@ -1,13 +1,4 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-import { createI18n } from 'vue-i18n'
-import App from './App.vue'
-import HomeView from './views/HomeView.vue'
-import AgreementView from './views/AgreementView.vue'
-
-import './main.css'
-
-const messages = {
+const translations = {
   ru: {
     hero: {
       title: "Спи спокойно",
@@ -36,24 +27,28 @@ const messages = {
   }
 }
 
-const i18n = createI18n({
-  legacy: false,
-  locale: localStorage.getItem('lang') || 'ru',
-  fallbackLocale: 'ru',
-  messages
-})
+export function createI18n(lang = 'ru') {
+  return {
+    currentLang: lang,
+    
+    t(key) {
+      const keys = key.split('.')
+      let value = translations[this.currentLang]
+      
+      for (const k of keys) {
+        value = value?.[k]
+      }
+      
+      return value || key
+    },
+    
+    setLanguage(lang) {
+      if (translations[lang]) {
+        this.currentLang = lang
+        localStorage.setItem('lang', lang)
+      }
+    }
+  }
+}
 
-const routes = [
-  { path: '/', component: HomeView },
-  { path: '/agreement', component: AgreementView }
-]
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes
-})
-
-const app = createApp(App)
-app.use(i18n)
-app.use(router)
-app.mount('#app')
+export default translations
