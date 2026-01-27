@@ -4,11 +4,12 @@ import AgreementView from './views/AgreementView.vue'
 
 const routes = [
     { path: '/', name: 'Home', component: HomeView },
-    { path: '/agreement', name: 'Agreement', component: AgreementView }
+    { path: '/agreement', name: 'Agreement', component: AgreementView },
+    { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(process.env.NODE_ENV === 'production' ? '/clawpn/' : '/'),
     routes
 })
 

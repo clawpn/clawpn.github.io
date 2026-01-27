@@ -5,14 +5,14 @@
                 <div class="footer-column">
                     <router-link to="/" class="footer-logo">CLAWPN</router-link>
                     <ul class="footer-links">
-                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Blocks? What blocks?</a></li>
+                        <li><a href="#">Blocks? What blocks?</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4 class="footer-heading">Service</h4>
                     <ul class="footer-links">
                         <li><a href="https://t.me/clawpnbot">Telegram Bot</a></li>
-                        <li><a href="https://t.me/clawpn">Community</a></li>
+                        <li><a href="https://t.me/clawpn">Telegram Channel</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">

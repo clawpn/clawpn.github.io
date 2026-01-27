@@ -2,8 +2,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { createI18n } from 'vue-i18n'
 import App from './App.vue'
-import HomeView from './views/HomeView.vue'
-import AgreementView from './views/AgreementView.vue'
+import router from './router'
 
 import './main.css'
 
@@ -39,7 +38,7 @@ const messages = {
             title: "Sleep soundly",
             subtitle: "without worrying about blocks",
             cta: "Try for Free",
-            pricing_info: "7 days free trial, then only 1€ per month"
+            pricing_info: "7 days free trial, then only €1 per month"
         },
         features: {
             speed: { title: "High Speed", desc: "Stable connection up to 1 Gbps for any task" },
@@ -67,16 +66,6 @@ const i18n = createI18n({
     locale: localStorage.getItem('lang') || 'ru',
     fallbackLocale: 'ru',
     messages
-})
-
-const routes = [
-    { path: '/', component: HomeView },
-    { path: '/agreement', component: AgreementView }
-]
-
-const router = createRouter({
-    history: createWebHistory(),
-    routes
 })
 
 const app = createApp(App)
