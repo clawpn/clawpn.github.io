@@ -5,7 +5,7 @@
                 <div class="footer-column">
                     <router-link to="/" class="footer-logo">CLAWPN</router-link>
                     <ul class="footer-links">
-                        <li><a href="#" target="_blank">Blocks? What blocks?</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Blocks? What blocks?</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">

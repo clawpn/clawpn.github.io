@@ -35,9 +35,6 @@
             </div>
         </div>
 
-        <div class="pt-16"></div>
-
-        <Footer class="reveal" :class="{ 'active': revealActive }" />
     </main>
 </template>
 
