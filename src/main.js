@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
 import { createI18n } from 'vue-i18n'
 import App from './App.vue'
 import router from './router'
@@ -16,19 +15,19 @@ const messages = {
         },
         features: {
             speed: { title: "Высокая скорость", desc: "Стабильное соединение до 1 Гбит/с для любых задач" },
-            privacy: { title: "Анонимность", desc: "Мы не храним логи и шифруем трафик" },
+            privacy: { title: "Приватность", desc: "Шифрование трафика и надежные протоколы" },
             devices: { title: "Любая платформа", desc: "Работает на iOS, Android, Windows и macOS" }
         },
         agreement: {
-            title: "Условия и Конфиденциальность",
+            title: "Пользовательское соглашение",
             date: "Дата вступления в силу: 05.12.2025",
             back: "← На главную",
             sec1_title: "1. ОБЩИЕ ПОЛОЖЕНИЯ",
-            sec1_text: `1.1. Настоящий документ представляет собой юридически обязывающий договор между вами и сервисом CLAWPN.\n1.2. Используя наш Сервис, Вы подтверждаете, что полностью соглашаетесь соблюдать все условия настоящего Соглашения.\n1.3. Сервис предоставляет технологию зашифрованного туннеля. Мы не несем ответственности за контент и действия пользователей.`,
+            sec1_text: `1.1. Настоящий документ представляет собой юридически обязывающий договор между вами и сервисом CLAWPN.\n1.2. Используя наш Сервис, Вы подтверждаете, что полностью соглашаетесь соблюдать все условия настоящего Соглашения.\n1.3. Сервис предоставляет технологию шифрования трафика. Мы не несем ответственности за контент и действия пользователей.`,
             sec2_title: "2. ОТВЕТСТВЕННОСТЬ",
-            sec2_text: `2.1. Вы обязуетесь использовать Сервис исключительно в законных целях.\n2.2. Запрещено: распространение вредоносного ПО, спам, взлом систем и деятельность, нарушающая законы РФ.\n2.3. Сервис предоставляется на условиях «как есть» (AS IS). Администрация не несет ответственности за прямые или косвенные убытки.`,
-            sec3_title: "3. ПОЛИТИКА NO-LOGS",
-            sec3_text: `3.1. Мы НЕ ЗАПИСЫВАЕМ и НЕ ХРАНИМ: ваш реальный IP, историю посещений и поисковые запросы.\n3.2. Мы обрабатываем только ваш Telegram User ID для работы аккаунта.\n3.3. В силу архитектуры No-Logs, мы технически не можем предоставить данные о вашей активности даже по запросу органов.`,
+            sec2_text: `2.1. Вы обязуетесь использовать Сервис исключительно в законных целях.\n2.2. Запрещено: распространение вредоносного ПО, спам, взлом систем и деятельность, нарушающая законы страны нахождения сервера или пользователя.\n2.3. Сервис предоставляется на условиях «как есть» (AS IS). Администрация не несет ответственности за прямые или косвенные убытки.`,
+            sec3_title: "3. ПОЛИТИКА МИНИМИЗАЦИИ ДАННЫХ",
+            sec3_text: `3.1. Мы придерживаемся принципа строгой конфиденциальности: мы не ведем учет посещаемых вами ресурсов. Все временные технические индикаторы сессий полностью стираются в автоматическом режиме.\n3.2. Для обеспечения стабильности соединений и защиты от атак сервис может обрабатывать технические метаданные сессий. Эта информация хранится в течение крайне ограниченного времени и автоматически перезаписывается.\n3.3. Мы обрабатываем только ваш Telegram User ID для управления доступом к аккаунту.`,
             sec4_title: "4. ПРОЧИЕ УСЛОВИЯ",
             sec4_text: `4.1. Администрация может изменять Соглашение в одностороннем порядке.\n4.2. Мы оставляем за собой право прекратить обслуживание при нарушении правил.`
         }
@@ -42,21 +41,21 @@ const messages = {
         },
         features: {
             speed: { title: "High Speed", desc: "Stable connection up to 1 Gbps for any task" },
-            privacy: { title: "Privacy First", desc: "We don't keep logs and encrypt traffic" },
-            devices: { title: "Any platform", desc: "Works on iOS, Android, Windows, and macOS" }
+            privacy: { title: "Privacy", desc: "Traffic encryption and secure protocols" },
+            devices: { title: "Any Platform", desc: "Works on iOS, Android, Windows, and macOS" }
         },
         agreement: {
-            title: "Terms & Privacy Policy",
-            date: "Effective Date: 2025-12-05",
-            back: "← Back Home",
+            title: "Terms & Privacy",
+            date: "Effective date: 05.12.2025",
+            back: "← Back to Home",
             sec1_title: "1. GENERAL PROVISIONS",
-            sec1_text: `1.1. This document is a legally binding contract between you and CLAWPN.\n1.2. By using the Service, you confirm your unconditional agreement to these terms.\n1.3. Service provides encrypted tunnel technology. We are not responsible for user content or actions.`,
+            sec1_text: `1.1. This document constitutes a legally binding agreement between you and the CLAWPN service.\n1.2. By using our Service, you confirm that you fully agree to comply with all terms and conditions of this Agreement.\n1.3. The service provides traffic encryption technology. We are not responsible for the content or actions of users.`,
             sec2_title: "2. RESPONSIBILITY",
-            sec2_text: `2.1. You agree to use the Service only for legal purposes.\n2.2. Prohibited: malware distribution, spam, hacking, and activities violating local laws.\n2.3. The service is provided 'AS IS'. Administration is not liable for any direct or indirect damages.`,
-            sec3_title: "3. NO-LOGS POLICY",
-            sec3_text: `3.1. We DO NOT record or store: your real IP, browsing history or search queries.\n3.2. We only process your Telegram User ID to maintain your account.\n3.3. Due to the No-Logs architecture, we technically cannot provide your activity data to any third party.`,
-            sec4_title: "4. OTHER TERMS",
-            sec4_text: `4.1. Administration may change this Agreement unilaterally.\n4.2. We reserve the right to terminate service for violating the terms.`
+            sec2_text: `2.1. You agree to use the Service solely for lawful purposes.\n2.2. Prohibited: the distribution of malicious software, spam, hacking, and any activities that violate the laws of the country where the server or user is located.\n2.3. The Service is provided on an "AS IS" basis. The Administration is not liable for any direct or indirect damages.`,
+            sec3_title: "3. DATA MINIMIZATION POLICY",
+            sec3_text: `3.1. We adhere to a strict confidentiality principle: your browsing history and search queries are not subject to long-term storage.\n3.2. To ensure connection stability and protection against attacks, the service may process technical session metadata. This information is stored for a strictly limited period and is automatically overwritten.\n3.3. We only process your Telegram User ID to manage account access.`,
+            sec4_title: "4. MISCELLANEOUS",
+            sec4_text: `4.1. The Administration may amend this Agreement unilaterally.\n4.2. We reserve the right to terminate service in the event of a violation of these rules.`
         }
     }
 }

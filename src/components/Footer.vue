@@ -5,7 +5,7 @@
                 <div class="footer-column">
                     <router-link to="/" class="footer-logo">CLAWPN</router-link>
                     <ul class="footer-links">
-                        <li><a href="#">Blocks? What blocks?</a></li>
+                        <li><a>Blocks? What blocks?</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -22,17 +22,13 @@
                         <li><router-link to="/agreement">Agreement</router-link></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h4 class="footer-heading font-game">Produced by<br>fourtythree</h4>
-                </div>
             </div>
             <div class="footer-bottom">
                 <div class="copyright">
-                    &copy; 2026 CLAWPN NETWORK. All rights reserved.
+                    &copy; 2026 CLAWPN
                 </div>
-                <div class="status">
-                    <span class="status-dot"></span>
-                    System: Online
+                <div class="copyright">
+                    Produced by fourtythree
                 </div>
             </div>
 		</div>

@@ -19,9 +19,9 @@
                     <div class="agreement-section-text white-space-pre">{{ $t('agreement.sec2_text') }}</div>
                 </section>
 
-                <section class="agreement-highlight-section">
-                    <h2 class="agreement-highlight-title">{{ $t('agreement.sec3_title') }}</h2>
-                    <div class="agreement-highlight-text white-space-pre">{{ $t('agreement.sec3_text') }}</div>
+                <section class="agreement-section">
+                    <h2 class="agreement-section-title">{{ $t('agreement.sec3_title') }}</h2>
+                    <div class="agreement-section-text white-space-pre">{{ $t('agreement.sec3_text') }}</div>
                 </section>
 
                 <section class="agreement-section">
